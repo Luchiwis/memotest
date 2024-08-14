@@ -1,4 +1,5 @@
 export function shuffle(arr) {
+    // funcion que desordena el array
     let arr2 = []
     while (arr.length > 0) {
         const posicionRandom = Math.round(Math.random() * arr.length)
