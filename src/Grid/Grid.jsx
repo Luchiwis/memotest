@@ -1,18 +1,26 @@
 import { Card } from "../Card/Card"
 import "./Grid.css"
 import data from "../db.json"
+import "../funciones/shuffle"
+import { shuffle } from "../funciones/shuffle"
 
 
 export function Grid() {
+
     const crearMazoMezclado = () => {
-        return data.concat(data)
-        // TODO: usar la funcion shuffle para mezclar
+        let a = shuffle(data.concat(data))
+        return a
     }
 
-    console.log(crearMazoMezclado())
+    const mazo = crearMazoMezclado()
+
     return (
         <div className="grid-memotest">
-
+            {
+                mazo.map((directorio, i) => {
+                    return <Card key={i} src={directorio} />
+                })
+            }
         </div>
     )
 }

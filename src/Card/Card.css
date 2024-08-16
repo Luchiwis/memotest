@@ -1,2 +1,8 @@
-.card-memotest{
+.card-memotest[data-show="false"]{
+    filter: brightness(0);
+}
+
+.card-memotest[data-show="true"]{
+    filter: brightness(100%);
+
 }
